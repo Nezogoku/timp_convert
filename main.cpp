@@ -44,7 +44,7 @@ int displayImage(timp image) {
 
 ///Program information
 void progInfo() {
-    cout << "USAGE: " << progName << " [options]\n\n"
+    cout << "USAGE: " << progName << " [options] <file(s).tip>\n\n"
          << "Options:\n"
          << "     -h                            prints all commands, ignores all other commands\n"
          << "     -d                            activates debug mode\n"
