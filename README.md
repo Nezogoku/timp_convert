@@ -5,7 +5,7 @@ A small program that utilizes the libTIMP library and SFML to both view and conv
     USAGE: timp_convert [options] <file(s).tip>
     Options:
         -h                            prints all commands, ignores all other commands
-        -d                            activates debug mode\
+        -d                            activates debug mode
         -v <infile.tip>               opens TIP file for viewing, debug loads it in chunks
         -b [XXX] <infile(s).tip>      batch converts all TIP files to specified image type XXX, default is PNG
         -c <infile.tip> [<outfile>]   converts TIP file to new image, default is PNG
