@@ -1,5 +1,5 @@
 # timp_convert
-A small program that utilizes the libTIMP library and SFML to both view and convert LocoRoco tip files.
+A small program that utilizes the libTIMP library and SFML to both view and convert LocoRoco tip and cip files.
 
 
     USAGE: timp_convert [options] <file(s).tip>
