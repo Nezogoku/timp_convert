@@ -1,7 +1,6 @@
 #include <algorithm>
 #include <cstdio>
 #include <iostream>
-#include <map>
 #include <string>
 #include <vector>
 #include "imgSupported.hpp"
@@ -104,14 +103,14 @@ int useImage(string infile, string outfile, string type, int version, bool debug
 
 ///Program information
 void progInfo(string progName) {
-    cout << "USAGE: " << progName << " [options] <file(s).tip>\n\n"
+    cout << "USAGE: " << progName << " [options] <file(s).tip/cip>\n\n"
          << "Options:\n"
          << "   -h                                  Prints all commands, ignores all other commands\n"
          << "   -d                                  Activates debug mode\n"
-         << "   -v <infile.tip/cip>                 Opens TIMP file for viewing\n"
-         << "   -b [XXX] [V] <infile(s).tip>        Batch converts all TIP files to specified image type XXX, default is PNG\n"
+         << "   -v <infile>                         Opens TIMP file for viewing, default option\n"
+         << "   -b [XXX] [V] <infile(s)>            Batch converts all TIP files to specified image type XXX, default is PNG\n"
          << "                                           optional version type V for appropriate images, default is 0\n"
-         << "   -c <infile.tip> [<outfile>] [V]     Converts TIP file to new image, default is PNG\n"
+         << "   -c <infile> [<outfile>] [V]         Converts TIP file to new image, default is PNG\n"
          << "                                           optional version type V for appropriate images, default is 0\n\n"
          << "Supported formats include:\n\t";
 
