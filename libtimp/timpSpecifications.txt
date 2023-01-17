@@ -1,0 +1,25 @@
+TIMP HEADER, 0x28 Bytes
+    TIMP 0x00
+    Major Version (?) 0x04
+        Mainly "1"
+    Minor Version (?) 0x06
+        Mainly "1"
+    IDK, 0x08
+    Null (?), 0x0C
+    Bit depth (?), 0x10
+        Usually "24"
+    Image width (px), 0x12
+    Image height (px), 0x14
+    IDK, 0x16
+    IDK, 0x18
+    IDK, 0x1A
+    IDK, 0x1C
+    Offset palette data, 0x20
+        0x00 is no palette data
+    Offset pixel data, 0x24
+
+PALETTE DATA, 0x04 Bytes
+    Red value, 0x00
+    Green value, 0x01
+    Blue value, 0x02
+    Alpha value, 0x03
