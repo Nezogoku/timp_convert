@@ -169,9 +169,14 @@ int main(int argc, char *argv[]) {
                             outOpt.erase(remove(outOpt.begin(), outOpt.end(), '\"'), outOpt.end());
 
                             if (outOpt[0] == '-') break;
+                            a += 1;
 
                             outOpts.push_back(outOpt);
-                            a += 1;
+                        }
+
+                        if (outOpts.empty()) {
+                            if (debugSet) cout << "Not enough options for this operation" << endl;
+                            continue;
                         }
 
                         outOpt = outOpts[0];
@@ -202,10 +207,11 @@ int main(int argc, char *argv[]) {
 
                         a += 1;
                         while (a < argc) {
-                            outOpt = argv[a++];
+                            outOpt = argv[a];
                             outOpt.erase(remove(outOpt.begin(), outOpt.end(), '\"'), outOpt.end());
 
                             if (outOpt[0] == '-') break;
+                            a += 1;
 
                             if (inFile.empty()) {
                                 inFile = outOpt;
