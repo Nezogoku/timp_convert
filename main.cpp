@@ -91,6 +91,21 @@ int useImage(string infile, string outfile, string type, int version, bool debug
             break;
 
         case 5:
+            if (debugSet) cout << "CONVERT TO ICO" << endl;
+            r = outICO(outfile, img8, x, y, z, 0);
+            break;
+
+        case 6:
+            if (debugSet) cout << "CONVERT TO CUR" << endl;
+
+            if (version < 1 || version > 6) version = 1;
+
+            if (debugSet) cout << "CUR version set to " << version << endl;
+
+            r = outICO(outfile, img8, x, y, z, version);
+            break;
+
+        case 7:
             if (debugSet) cout << "CONVERT TO PNG" << endl;
             r = outPNG(outfile, img8, x, y);
             break;
@@ -105,17 +120,20 @@ int useImage(string infile, string outfile, string type, int version, bool debug
 void progInfo(string progName) {
     cout << "USAGE: " << progName << " [options] <file(s).tip/cip>\n\n"
          << "Options:\n"
-         << "   -h                                  Prints all commands, ignores all other commands\n"
-         << "   -d                                  Activates debug mode\n"
-         << "   -v <infile>                         Opens TIMP file for viewing, default option\n"
-         << "   -b [XXX] [V] <infile(s)>            Batch converts all TIP files to specified image type XXX, default is PNG\n"
-         << "                                           optional version type V for appropriate images, default is 0\n"
-         << "   -c <infile> [<outfile>] [V]         Converts TIP file to new image, default is PNG\n"
-         << "                                           optional version type V for appropriate images, default is 0\n\n"
-         << "Supported formats include:\n\t";
+         << "    -h                                  Prints all commands, ignores all other commands\n"
+         << "    -d                                  Activates debug mode\n"
+         << "    -v <infile>                         Opens TIMP file for viewing, default option\n"
+         << "    -b [XXX] [V] <infile(s)>            Batch converts all TIP files to specified image type XXX, default is PNG\n"
+         << "                                            optional version type V for appropriate images, default is 0\n"
+         << "    -c <infile> [<outfile>] [V]         Converts TIP file to new image, default is PNG\n"
+         << "                                            optional version type V for appropriate images, default is 0\n\n"
+         << "Supported formats include:";
 
-    int i = 0;
-    for (auto &f0 : formats) if (i++) for (auto &f1 : f0) if (!f1.empty()) cout << f1 << ", ";
+    for (int f = 0; f < FORMATS; ++f) {
+        cout << "\n    ";
+        for (auto &f0 : formats[f + 1]) if (!f0.empty()) cout << f0 << ' ';
+        for (auto &f1 : format_descriptions[f + 1]) if (!f1.empty()) cout << "\n        " << f1;
+    }
     cout << endl;
 }
 
