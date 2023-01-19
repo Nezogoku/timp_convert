@@ -1,12 +1,12 @@
 # timp_convert
-A small program that utilizes the libTIMP library and SFML to both view and convert LocoRoco tip and cip files.
+A small program that utilizes the libTIMP, lodepng, toojpeg, and CImg libraries to both convert and view LocoRoco tip and cip files.
 
     
     USAGE: timp_convert [options] <file(s).tip/cip>
 
     Options:
         -h                                  Prints all commands, ignores all other commands
-        -d                                  Activates debug mode
+        -d                                  Toggles debug mode
         -v <infile>                         Opens TIMP file for viewing, default option
         -b [XXX] [V] <infile(s)>            Batch converts all TIP files to specified image type XXX, default is PNG
                                                 optional version type V for appropriate images, default is 0
@@ -23,7 +23,7 @@ A small program that utilizes the libTIMP library and SFML to both view and conv
                 Portable Pixmap Format, versions 3 (ASCII) and 6 (Binary)
         PAM
             Netpbm Portable Arbitrary Map
-        JPG JPEG JPE JIF JFIF JFI
+        JPG JPEG JPE JIF JFIF JFI {toojpeg}
             Joint Photographic Experts Group format
         ICO
             Windows Computer Icon
@@ -35,5 +35,5 @@ A small program that utilizes the libTIMP library and SFML to both view and conv
                 Top-right hotspot, version 4
                 Bottom-left hotspot, version 5
                 Bottom-right hotspot, version 6
-        PNG
+        PNG {lodepng}
             Portable Network Graphics format
