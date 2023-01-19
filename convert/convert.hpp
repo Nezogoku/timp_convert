@@ -16,6 +16,7 @@ int outJPG(std::string dst_file, const unsigned char* src, int width, int height
 int outPNM(std::string dst_file, const unsigned char* src, int width, int height, int depth, int colours, int version);
 int outPAM(std::string dst_file, const unsigned char* src, int width, int height, int depth, int colours);
 int outBMP(std::string dst_file, const unsigned char* src, int width, int height, int depth);
+int outICO(std::string dst_file, const unsigned char* src, int width, int height, int depth, int version);
 
 
 #endif
