@@ -8,9 +8,9 @@ A small program that utilizes the libTIMP, lodepng, toojpeg, and CImg libraries 
         -h                                  Prints all commands, ignores all other commands
         -d                                  Toggles debug mode
         -v <infile>                         Opens TIMP file for viewing, default option
-        -b [XXX] [V] <infile(s)>            Batch converts all TIP files to specified image type XXX, default is PNG
+        -b [XXX] [V] <infile(s)>            Batch converts all TIMP files to specified image type XXX, default is PNG
                                                 optional version type V for appropriate images, default is 0
-        -c <infile> [<outfile>] [V]         Converts TIP file to new image, default is PNG
+        -c <infile> [<outfile>] [V]         Converts TIMP file to new image, default is PNG
                                                 optional version type V for appropriate images, default is 0
 
     Supported formats include:
